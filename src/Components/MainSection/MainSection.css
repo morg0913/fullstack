@@ -1,0 +1,85 @@
+
+.toolbar .left-items .vertical-line{
+    border-left: 2px solid black;
+    border-radius: 2px;
+
+}
+
+#square2 {
+    position: relative;
+    flex: 15px;
+    display: flex;
+    left: 650px;
+    bottom: 100px;
+    width: 100px;
+    height: 100px;
+    font-size: 100px;
+
+}
+
+
+.main .page-left {
+    /*border: 1px solid red;*/
+    flex-basis: 75%;
+    margin-right: 60px;
+
+}
+
+.main .page-left .post{
+    position: relative;
+    border: 2px solid black;
+    border-radius: 2px;
+    padding-left: 5px;
+    margin: 2px 10px 10px 10px;
+    height: 200px;
+
+}
+
+.post{
+    border-collapse: collapse;
+    border: 2px solid rgb(0,0,0);
+    width: 53.5%;
+}
+.main .page-left .post .header-top {
+    position: absolute;
+    top: -15px;
+}
+.main .page-left .post p {
+    position: absolute;
+    margin-top: 40px;
+}
+
+.main .page-left .post .left-bottom{
+    position: absolute;
+    bottom: 5px;
+}
+
+.main .page-left .post .box{
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    box-sizing: border-box;
+    width: 100px;
+    height: 100px;
+    /*padding: 30px;*/
+    border: 2px solid black;
+}
+
+.cross {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent 35%, grey 35%, grey 65%,  transparent 65%),
+    linear-gradient(-45deg, transparent 35%, grey 35%, grey 65%, transparent 65%);
+    /*padding: -20px;*/
+    /*transform: rotate(45deg);*/
+
+}
+
+
+
+.main .page-left h1{
+    margin-left: 10px;
+}
+.red {
+    color: red;
+}
