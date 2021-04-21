@@ -4,9 +4,8 @@ import React from "react";
 class Header extends React.Component {
 
 
-
     render() {
-        return(
+        return (
             <div>
                 {/*<div className="toolbar">*/}
                 {/*    <span className="left-items">*/}
@@ -18,12 +17,12 @@ class Header extends React.Component {
                 {/*    </span>*/}
                 {/*    <a href="" className="right-item">Login</a>*/}
                 {/*</div>*/}
-                <h1 > This is my blog</h1>
+                <h1> This is my blog</h1>
             </div>);
-
 
 
     }
 
 }
+
 export default Header;

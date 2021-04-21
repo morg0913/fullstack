@@ -6,7 +6,7 @@ function MainSection(props) {
 
     return (
 
-        <section className="page-left" >
+        <section className="page-left">
             <div className="post">
                 <div className="box">
                     <div className="cross"></div>
@@ -15,7 +15,7 @@ function MainSection(props) {
 
                 <p>My <b>first bold post</b> is all about my <span class="red">blog post</span> and
                     how to write a new post in my blog, you can find it
-                     <a href=""> here</a></p>
+                    <a href=""> here</a></p>
                 <div className="left-bottom">published {props.user.published[0]} day ago by {props.user.name[0]}</div>
             </div>
 
