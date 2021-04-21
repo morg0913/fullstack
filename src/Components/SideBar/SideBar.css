@@ -1,19 +1,29 @@
 
 aside {
-    float: right;
-    width: 20%;
-    margin: 3% 0px 0px 0px;
+    float: right !important;
+    width: 20% !important;
+    margin: 3% 0px 0px 0px !important;
+    background-color: white !important;
 }
 aside .latest,.popular{
-    list-style: none;
-    padding: 0px 0px 0px 0px;
+    list-style: none !important;
+    padding: 0px 0px 0px 0px !important;
+    background-color: white !important;
 }
 
+h4{
+    color: black !important;
+}
 
 
 aside .horizontal-line {
     /*flex-grow: 1;*/
-    border-bottom: 2px solid black;
-    border-radius: 2px;
-    margin: 10px 50px 10px 10px;
+    border-bottom: 2px solid black !important;
+    border-radius: 2px !important;
+    margin: 10px 50px 10px 10px !important;
+
 }
+
+/*.page-right{*/
+/*    right: 80px;*/
+/*}*/
