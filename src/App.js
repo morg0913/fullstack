@@ -12,6 +12,7 @@ import {
     Route,
     Link
 } from "react-router-dom";
+import {Button} from "@material-ui/core";
 // P A G E S
 import HomePage from "./Pages/HomePage";
 import AboutMe from "./Pages/AboutMe";
@@ -19,6 +20,7 @@ import PostPage from "./Pages/PostPage";
 import NewPost from "./Pages/NewPost";
 import Login from "./Pages/Login";
 import post_handler from "./Pages/post_handler";
+import Grid from "@material-ui/core/Grid";
 
 //ctrl + alt + L
 class App extends React.Component {
@@ -50,32 +52,40 @@ class App extends React.Component {
     render() {
         return (
             <div>
+
                 <Header/>
-                <SideBar
-                    popular={this.state.popular}
-                    latest={this.state.latest}
-                />
+
+
+
+
                 <Router>
-                    <div>
-                        <nav>
-                            <ul className="left-items">
-                                <li className="item">
-                                    <Link to="/">HomePage</Link>
-                                </li>
-                                <li className="item">
-                                    <Link to="/AboutMe">About</Link>
-                                </li>
-                                <li className="item">
-                                    <Link to="/NewPost">NewPost</Link>
-                                </li>
-                                <li className="item">
-                                    <Link to="/PostPage">PostPage</Link>
-                                </li>
-                                <li className="right-item">
-                                    <Link to="/Login">Login</Link>
-                                </li>
-                            </ul>
-                        </nav>
+
+                    <nav className="big-nav">
+
+                        <ul className="left-items">
+                            <li className="item">
+                                <Link to="/">HomePage</Link>
+                            </li>
+                            <li className="item">
+                                <Link to="/AboutMe">About</Link>
+                            </li>
+                            <li className="item">
+                                <Link to="/NewPost">NewPost</Link>
+                            </li>
+                            <li className="item">
+                                <Link to="/PostPage">PostPage</Link>
+                            </li>
+                            <li className="right-item">
+                                <Link to="/Login">Login</Link>
+                            </li>
+                        </ul>
+
+                        <SideBar
+                            popular={this.state.popular}
+                            latest={this.state.latest}
+                        />
+
+
 
                         <Switch>
                             <Route path="/AboutMe">
@@ -94,8 +104,10 @@ class App extends React.Component {
                                 <HomePage user={this.state.user}/>
                             </Route>
                         </Switch>
-                    </div>
+
+                </nav>
                 </Router>
+
             </div>
         );
     }
