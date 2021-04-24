@@ -3,21 +3,18 @@ import TextField from "@material-ui/core/TextField";
 import InputAdornments from "./InputAdornments";
 import Button from '@material-ui/core/Button';
 import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
-import AboutMe from "./AboutMe";
+
 
 function Login(props){
-
-    console.log("Login");
-
 
     return(
         <div align="center">
 
-            <h2 >Login</h2>
+            <h2 style={{color:"#347299"}}>Login</h2>
 
             <TextField
                 id="standard-full-width"
-                style={{ margin: 8 }}
+                style={{ margin: 8, color:"#347299" }}
                 placeholder="U s e r  N a m e"
                 margin="normal"
                 InputLabelProps={{
@@ -26,11 +23,11 @@ function Login(props){
             />
             <InputAdornments />
             <br></br>
-            <Button variant="contained"><b>Login</b></Button>
+            <Button variant="contained" style={{color:"#347299"}}><b >Login</b></Button>
             <br></br><br></br>
 
             {/*<Router>*/}
-                <Link to="/Login">Forgot Username / Password</Link>
+                <Link to="/Login" style={{color:"#347299"}}>Forgot Username / Password</Link>
 
             {/*        <Route path="/Login">*/}
             {/*            <Login/>*/}

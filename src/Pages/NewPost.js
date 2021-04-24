@@ -32,7 +32,7 @@ class NewPost extends React.Component {
 
     render() {
         return (
-            <div>
+            <div align="center">
                 <form onSubmit={this.onFormSubmit} className={NewPost.root} noValidate autoComplete="off">
                     <div className="field">
                         <label>
@@ -57,13 +57,12 @@ class NewPost extends React.Component {
                                 value={this.state.context}
                                 onChange={this.onInputChange}
                             />
-
+                            <br></br><br></br>
                             <div className={NewPost.root}>
                                 <input accept="image/*" className={NewPost.input} id="icon-button-file" type="file" />
                                 <label htmlFor="icon-button-file">
                                     <IconButton color="primary" aria-label="upload picture" component="span" value={this.state.picture}
                                                 onChange={this.onInputChange}>
-
                                     </IconButton>
                                 </label>
                             </div>
@@ -71,6 +70,7 @@ class NewPost extends React.Component {
 
 
                         </label>
+                        <br></br><br></br>
                         <Button
                             onClick={this.onInputChange}
                             variant="contained"

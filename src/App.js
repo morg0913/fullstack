@@ -22,6 +22,22 @@ import Login from "./Pages/Login";
 import post_handler from "./Pages/post_handler";
 import Grid from "@material-ui/core/Grid";
 
+import {createMuiTheme} from '@material-ui/core/styles';
+import purple from '@material-ui/core/colors/purple';
+import green from '@material-ui/core/colors/green';
+// import ThemeProvider from "@material-ui/system";
+
+// const theme = createMuiTheme({
+//     palette: {
+//         primary: {
+//             main: purple[500],
+//         },
+//         secondary: {
+//             main: green[500],
+//         },
+//     },
+// });
+
 //ctrl + alt + L
 class App extends React.Component {
     constructor(props) {
@@ -51,64 +67,63 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
-
-                <Header/>
+            // <ThemeProvider theme={theme}>
 
 
+                <div className="App">
+
+                    <Header/>
+                    <Router>
+
+                        <nav className="big-nav">
+
+                            <ul className="left-items">
+                                <li className="item">
+                                    <Link to="/">HomePage</Link>
+                                </li>
+                                <li className="item">
+                                    <Link to="/AboutMe">About</Link>
+                                </li>
+                                <li className="item">
+                                    <Link to="/NewPost">NewPost</Link>
+                                </li>
+                                <li className="item">
+                                    <Link to="/PostPage">PostPage</Link>
+                                </li>
+                                <li className="right-item">
+                                    <Link to="/Login">Login</Link>
+                                </li>
+                            </ul>
+
+                            <SideBar
+                                popular={this.state.popular}
+                                latest={this.state.latest}
+                            />
 
 
-                <Router>
+                            <Switch>
+                                <Route path="/AboutMe">
+                                    <AboutMe/>
+                                </Route>
+                                <Route path="/NewPost">
+                                    <NewPost/>
+                                </Route>
+                                <Route path="/PostPage">
+                                    <post_handler posts={this.state.postData}/>
+                                </Route>
+                                <Route path="/Login">
+                                    <Login/>
+                                </Route>
+                                <Route path="/">
+                                    <HomePage user={this.state.user}/>
+                                </Route>
+                            </Switch>
 
-                    <nav className="big-nav">
+                        </nav>
+                    </Router>
 
-                        <ul className="left-items">
-                            <li className="item">
-                                <Link to="/">HomePage</Link>
-                            </li>
-                            <li className="item">
-                                <Link to="/AboutMe">About</Link>
-                            </li>
-                            <li className="item">
-                                <Link to="/NewPost">NewPost</Link>
-                            </li>
-                            <li className="item">
-                                <Link to="/PostPage">PostPage</Link>
-                            </li>
-                            <li className="right-item">
-                                <Link to="/Login">Login</Link>
-                            </li>
-                        </ul>
-
-                        <SideBar
-                            popular={this.state.popular}
-                            latest={this.state.latest}
-                        />
-
-
-
-                        <Switch>
-                            <Route path="/AboutMe">
-                                <AboutMe/>
-                            </Route>
-                            <Route path="/NewPost">
-                                <NewPost/>
-                            </Route>
-                            <Route path="/PostPage">
-                                <post_handler posts={this.state.postData}/>
-                            </Route>
-                            <Route path="/Login">
-                                <Login/>
-                            </Route>
-                            <Route path="/">
-                                <HomePage user={this.state.user}/>
-                            </Route>
-                        </Switch>
-
-                </nav>
-                </Router>
-
-            </div>
+                </div>
+            // </ThemeProvider>
         );
     }
 }
