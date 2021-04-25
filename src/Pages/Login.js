@@ -3,14 +3,18 @@ import TextField from "@material-ui/core/TextField";
 import InputAdornments from "./InputAdornments";
 import Button from '@material-ui/core/Button';
 import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
-
-
+import ListItemIcon from "@material-ui/core/ListItemIcon";
+import LockOpenTwoToneIcon from '@material-ui/icons/LockOpenTwoTone';
 function Login(props){
 
     return(
         <div align="center">
 
-            <h2 style={{color:"#347299"}}>Login</h2>
+            <h2 style={{color:"#347299"}}>
+                Login <br></br>
+                <ListItemIcon>
+                <LockOpenTwoToneIcon color="primary" fontSize={"large"}/>
+            </ListItemIcon></h2>
 
             <TextField
                 id="standard-full-width"

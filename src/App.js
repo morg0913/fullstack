@@ -25,18 +25,20 @@ import Grid from "@material-ui/core/Grid";
 import {createMuiTheme} from '@material-ui/core/styles';
 import purple from '@material-ui/core/colors/purple';
 import green from '@material-ui/core/colors/green';
-// import ThemeProvider from "@material-ui/system";
+import NavBar from "./Components/NavBar";
+ import {ThemeProvider} from "@material-ui/core/styles";
+import {blueGrey} from "@material-ui/core/colors";
 
-// const theme = createMuiTheme({
-//     palette: {
-//         primary: {
-//             main: purple[500],
-//         },
-//         secondary: {
-//             main: green[500],
-//         },
-//     },
-// });
+const theme = createMuiTheme({
+    palette: {
+        primary: {
+            main: blueGrey[500],
+        },
+        secondary: {
+            main: green[500],
+        },
+    },
+});
 
 //ctrl + alt + L
 class App extends React.Component {
@@ -67,13 +69,14 @@ class App extends React.Component {
 
     render() {
         return (
-            // <ThemeProvider theme={theme}>
+             <ThemeProvider theme={theme}>
 
 
                 <div className="App">
 
                     <Header/>
                     <Router>
+                        {/*<NavBar />*/}
 
                         <nav className="big-nav">
 
@@ -94,6 +97,7 @@ class App extends React.Component {
                                     <Link to="/Login">Login</Link>
                                 </li>
                             </ul>
+                        </nav>
 
                             <SideBar
                                 popular={this.state.popular}
@@ -119,11 +123,11 @@ class App extends React.Component {
                                 </Route>
                             </Switch>
 
-                        </nav>
+
                     </Router>
 
                 </div>
-            // </ThemeProvider>
+             </ThemeProvider>
         );
     }
 }
