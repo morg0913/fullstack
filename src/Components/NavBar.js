@@ -9,16 +9,20 @@ import MenuIcon from '@material-ui/icons/Menu';
 import {BrowserRouter as Router} from "react-router-dom";
 import NavItems from "./NavItems";
 import Drawer from '@material-ui/core/Drawer';
+import ListItem from "@material-ui/core/ListItem";
 
 const useStyles = makeStyles((theme) => ({
     root: {
         flexGrow: 1,
+
     },
     menuButton: {
         marginRight: theme.spacing(2),
+
     },
     title: {
         flexGrow: 1,
+
     },
 }));
 
@@ -28,9 +32,9 @@ function NavBar() {
 
     return (
         <div className={classes.root}>
-            <AppBar position="static">
-                <Toolbar>
-                    <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu"
+            <AppBar position="static" >
+                <Toolbar >
+                    <IconButton edge="start" className={classes.menuButton} color="default" aria-label="menu"
                                 onClick={() => SetIsMenuOpen(true)}>
                         <MenuIcon/>
 
@@ -41,7 +45,7 @@ function NavBar() {
                     <Typography variant="h6" className={classes.title}>
                         News
                     </Typography>
-                    <Button color="inherit">Login</Button>
+                    <Button component="a"  href="/Login" key='Login' color="inherit">Login</Button>
                 </Toolbar>
             </AppBar>
         </div>

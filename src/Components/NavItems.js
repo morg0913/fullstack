@@ -35,24 +35,24 @@ export default function NavItems() {
 
     return (
         <div>
-            <List>
-                    <ListItem button key='HomePage' >
+            <List >
+                    <ListItem button  component="a" href="/HomePage" key='HomePage' >
                         <ListItemIcon>
                             <HomeIcon color="primary"/>
                         </ListItemIcon>
                         <ListItemText primary='HomePage'/>
                     </ListItem>
 
-                <ListItem button key='/AboutMe'>
+                <ListItem button component="a" href="/AboutMe" key='/AboutMe'>
                     <ListItemIcon><InboxIcon />
                     </ListItemIcon>
                     <ListItemText primary='AboutMe' />
                 </ListItem>
 
-                <ListItem button key='NewPost'>
+                <ListItem button component="a" href="/NewPost" key='NewPost'>
                     <ListItemIcon><InboxIcon />
                     </ListItemIcon>
-                    <ListItemText primary='NewPost' />
+                    <ListItemText  primary='NewPost' />
                 </ListItem>
 
 

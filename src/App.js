@@ -70,34 +70,31 @@ class App extends React.Component {
     render() {
         return (
              <ThemeProvider theme={theme}>
-
-
                 <div className="App">
-
                     <Header/>
                     <Router>
-                        {/*<NavBar />*/}
+                        <NavBar />
 
-                        <nav className="big-nav">
+                        {/*<nav className="big-nav">*/}
 
-                            <ul className="left-items">
-                                <li className="item">
-                                    <Link to="/">HomePage</Link>
-                                </li>
-                                <li className="item">
-                                    <Link to="/AboutMe">About</Link>
-                                </li>
-                                <li className="item">
-                                    <Link to="/NewPost">NewPost</Link>
-                                </li>
-                                <li className="item">
-                                    <Link to="/PostPage">PostPage</Link>
-                                </li>
-                                <li className="right-item">
-                                    <Link to="/Login">Login</Link>
-                                </li>
-                            </ul>
-                        </nav>
+                        {/*    <ul className="left-items">*/}
+                        {/*        <li className="item">*/}
+                        {/*            <Link to="/">HomePage</Link>*/}
+                        {/*        </li>*/}
+                        {/*        <li className="item">*/}
+                        {/*            <Link to="/AboutMe">About</Link>*/}
+                        {/*        </li>*/}
+                        {/*        <li className="item">*/}
+                        {/*            <Link to="/NewPost">NewPost</Link>*/}
+                        {/*        </li>*/}
+                        {/*        /!*<li className="item"> *!/*/}
+                        {/*        /!*    <Link to="/PostPage">PostPage</Link>*!/*/}
+                        {/*        /!*</li>*!/*/}
+                        {/*        <li className="right-item">*/}
+                        {/*            <Link to="/Login">Login</Link>*/}
+                        {/*        </li>*/}
+                        {/*    </ul>*/}
+                        {/*</nav>*/}
 
                             <SideBar
                                 popular={this.state.popular}
@@ -112,6 +109,7 @@ class App extends React.Component {
                                 <Route path="/NewPost">
                                     <NewPost/>
                                 </Route>
+                                {/*post:/id*/}
                                 <Route path="/PostPage">
                                     <post_handler posts={this.state.postData}/>
                                 </Route>
