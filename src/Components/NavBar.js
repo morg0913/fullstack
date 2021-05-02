@@ -26,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-function NavBar() {
+function NavBar(props) {
     const classes = useStyles();
     const [isMenuOpen, SetIsMenuOpen] = useState(false);
 
@@ -43,7 +43,7 @@ function NavBar() {
                         <NavItems/>
                     </Drawer>
                     <Typography variant="h6" className={classes.title}>
-                        News
+                        {props.name}
                     </Typography>
                     <Button component="a"  href="/Login" key='Login' color="inherit">Login</Button>
                 </Toolbar>

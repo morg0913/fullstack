@@ -36,7 +36,7 @@ export default function NavItems() {
     return (
         <div>
             <List >
-                    <ListItem button  component="a" href="/HomePage" key='HomePage' >
+                    <ListItem button  component="a" href="/" key='HomePage' >
                         <ListItemIcon>
                             <HomeIcon color="primary"/>
                         </ListItemIcon>

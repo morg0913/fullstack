@@ -7,6 +7,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 import IconButton from '@material-ui/core/IconButton';
 import PhotoCamera from '@material-ui/icons/PhotoCamera';
+import NavBar from "../Components/NavBar";
 
 class NewPost extends React.Component {
     constructor(props) {
@@ -33,6 +34,7 @@ class NewPost extends React.Component {
     render() {
         return (
             <div align="center">
+                <NavBar name={"New Post"}/>
                 <form onSubmit={this.onFormSubmit} className={NewPost.root} noValidate autoComplete="off">
                     <div className="field">
                         <label>

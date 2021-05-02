@@ -19,7 +19,7 @@ import AboutMe from "./Pages/AboutMe";
 import PostPage from "./Pages/PostPage";
 import NewPost from "./Pages/NewPost";
 import Login from "./Pages/Login";
-import post_handler from "./Pages/post_handler";
+import PostHandler from "./Pages/PostHandler";
 import Grid from "@material-ui/core/Grid";
 
 import {createMuiTheme} from '@material-ui/core/styles';
@@ -45,16 +45,16 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            "user": {
+            user: {
                 "name": ["mor", "adi", "bubu"],
                 "published": [1, 2, 6],
                 "title": [1, 2, 3],
             },
-            "posts": [1, 2, 3],
-            "popular": [1, 2, 3],
-            "latest": [1, 2, 3],
+            posts: [1, 2, 3],
+            popular: [1, 2, 3],
+            latest: [1, 2, 3],
 
-            "postData": [{
+            postData: [{
                 id: 1, title: "post1", context: "bla bla bla 11111", publishTime: "published 3 days ago by",
                 author: "mor"
             }, {
@@ -72,56 +72,33 @@ class App extends React.Component {
              <ThemeProvider theme={theme}>
                 <div className="App">
                     <Header/>
+                    <postHandler posts={this.state.postData}/>
+
                     <Router>
-                        <NavBar />
-
-                        {/*<nav className="big-nav">*/}
-
-                        {/*    <ul className="left-items">*/}
-                        {/*        <li className="item">*/}
-                        {/*            <Link to="/">HomePage</Link>*/}
-                        {/*        </li>*/}
-                        {/*        <li className="item">*/}
-                        {/*            <Link to="/AboutMe">About</Link>*/}
-                        {/*        </li>*/}
-                        {/*        <li className="item">*/}
-                        {/*            <Link to="/NewPost">NewPost</Link>*/}
-                        {/*        </li>*/}
-                        {/*        /!*<li className="item"> *!/*/}
-                        {/*        /!*    <Link to="/PostPage">PostPage</Link>*!/*/}
-                        {/*        /!*</li>*!/*/}
-                        {/*        <li className="right-item">*/}
-                        {/*            <Link to="/Login">Login</Link>*/}
-                        {/*        </li>*/}
-                        {/*    </ul>*/}
-                        {/*</nav>*/}
-
-                            <SideBar
-                                popular={this.state.popular}
-                                latest={this.state.latest}
-                            />
-
-
                             <Switch>
                                 <Route path="/AboutMe">
                                     <AboutMe/>
                                 </Route>
+
                                 <Route path="/NewPost">
                                     <NewPost/>
                                 </Route>
-                                {/*post:/id*/}
-                                <Route path="/PostPage">
-                                    <post_handler posts={this.state.postData}/>
+
+                                <Route path="/PostPage/:id">
+                                    <PostHandler posts={this.state.postData}/>
                                 </Route>
+
                                 <Route path="/Login">
                                     <Login/>
                                 </Route>
+
                                 <Route path="/">
-                                    <HomePage user={this.state.user}/>
+                                    <HomePage posts={this.state.postData}
+                                              popular={this.state.popular}
+                                              latest={this.state.latest}
+                                    />
                                 </Route>
                             </Switch>
-
-
                     </Router>
 
                 </div>

@@ -5,10 +5,12 @@ import Button from '@material-ui/core/Button';
 import {BrowserRouter as Router, Link, Route, Switch} from "react-router-dom";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import LockOpenTwoToneIcon from '@material-ui/icons/LockOpenTwoTone';
+import NavBar from "../Components/NavBar";
 function Login(props){
 
     return(
         <div align="center">
+            <NavBar name={"Login"}/>
 
             <h2 style={{color:"#347299"}}>
                 Login <br></br>
