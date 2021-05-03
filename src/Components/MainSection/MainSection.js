@@ -1,6 +1,6 @@
 import React from "react";
-import Posts from "./Posts/Posts";
-import SideBar from "../SideBar/SideBar";
+import Button from "@material-ui/core/Button";
+
 
 function MainSection(props) {
 
@@ -17,7 +17,7 @@ function MainSection(props) {
 
                              <p>My <b>first bold post</b> is all about my <span class="red">{post.context}</span> and
                                  how to write a new post in my blog, you can find it
-                                 <a href=""> here</a></p>
+                                 <Button component="a"  href="/Post/:id" key={post.id} color="inherit">Here</Button></p>
                              <div className="left-bottom">published {props.publishTime} day ago by {props.author}</div>
                          </div>
                 </section>
