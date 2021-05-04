@@ -85,7 +85,7 @@ class App extends React.Component {
                                 </Route>
 
                                 <Route path="/PostPage/:id">
-                                    <PostHandler posts={this.state.postData}/>
+                                    <PostPage posts={this.state.postData}/>
                                 </Route>
 
                                 <Route path="/Login">
